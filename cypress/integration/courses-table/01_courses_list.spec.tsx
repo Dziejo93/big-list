@@ -20,6 +20,7 @@ describe("01 - courses - list", () => {
 
     it("is scrollable", () => {
       coursesListPage
+        .verifyBody()
         .scrollTo("center")
         .checkIsHeaderVisible()
         .scrollTo("bottom");

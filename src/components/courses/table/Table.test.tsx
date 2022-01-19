@@ -6,6 +6,7 @@ import CoursesTable, { COLUMNS_SETTINGS } from "./index";
 import { MOCK_DATA } from "../../../mocks";
 import { RootState } from "../../../store";
 import { STATUSES } from "../../../models/statuses";
+import thunk from "redux-thunk";
 
 const initialState = {
   courses: {
@@ -14,7 +15,7 @@ const initialState = {
   },
 };
 
-const mockStore = configureStore([]);
+const mockStore = configureStore([thunk]);
 
 function renderComponent(initialState: Partial<RootState>) {
   const state = mockStore(initialState);

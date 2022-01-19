@@ -32,6 +32,11 @@ export class CoursesListPage {
     return this;
   }
 
+  verifyBody() {
+    cy.get('[data-testid="courses-table-body-row"]', { timeout: 100000 });
+    return this;
+  }
+
   scrollTo(position: Cypress.PositionType) {
     cy.get(`${this.selectors.table}>div`).eq(1).scrollTo(position);
     return this;
