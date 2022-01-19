@@ -1,5 +1,6 @@
+import { COLUMNS_SETTINGS } from "../../../src/components/courses/table";
+
 export class CoursesListPage {
-  // this gives false positive due to eslint babel-parser version
   selectors = {
     table: '[data-testid="courses-table"]',
     tableHeader: '[data-testid="courses-table-header"]',
@@ -22,14 +23,16 @@ export class CoursesListPage {
     return this;
   }
 
-  checkHeadersOrder(headersArray) {
+  checkHeadersOrder(
+    headersArray: Array<typeof COLUMNS_SETTINGS[number]["Header"]>
+  ) {
     cy.get(this.selectors.tableHeaderCell).each((el, index) =>
       cy.wrap(el).contains(headersArray[index])
     );
     return this;
   }
 
-  scrollTo(position) {
+  scrollTo(position: Cypress.PositionType) {
     cy.get(`${this.selectors.table}>div`).eq(1).scrollTo(position);
     return this;
   }

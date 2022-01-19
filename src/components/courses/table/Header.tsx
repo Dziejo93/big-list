@@ -1,11 +1,11 @@
 import { Header, HeaderCell, HeaderRow } from "../../table";
 import { HeaderGroup } from "react-table";
-import { Courses } from "../../../models/courses";
+import { Course } from "../../../models/courses";
 
 const COURSES_HEADER_WIDTH = "752px";
 
 interface HeaderCellListProps {
-  headerGroup: HeaderGroup<Courses>;
+  headerGroup: HeaderGroup<Course>;
 }
 
 function HeaderCellList({ headerGroup }: HeaderCellListProps) {
@@ -29,7 +29,7 @@ function HeaderCellList({ headerGroup }: HeaderCellListProps) {
 }
 
 interface HeaderRowsListProps {
-  headerGroups: HeaderGroup<Courses>[];
+  headerGroups: HeaderGroup<Course>[];
 }
 
 function HeaderRowsList({ headerGroups }: HeaderRowsListProps) {
@@ -58,7 +58,7 @@ function HeaderRowsList({ headerGroups }: HeaderRowsListProps) {
 }
 
 interface CoursesTableHeaderProps {
-  headerGroups: HeaderGroup<Courses>[];
+  headerGroups: HeaderGroup<Course>[];
 }
 
 function CoursesTableHeader({ headerGroups }: CoursesTableHeaderProps) {

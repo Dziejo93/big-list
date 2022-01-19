@@ -9,7 +9,7 @@ describe("01 - courses - list", () => {
     coursesListPage.visitCoursesList();
   });
 
-  context("courses list table", () => {
+  describe("courses list table", () => {
     it("is visible", () => {
       coursesListPage.tableIsVisible();
     });

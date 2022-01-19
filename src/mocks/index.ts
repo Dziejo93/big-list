@@ -1,6 +1,6 @@
 import { Courses } from "../models/courses";
 
-export const MOCK_DATA: Courses[] = [
+export const MOCK_DATA: Courses = [
   {
     imageUrl: "http://dummyimage.com/276x299.png/dddddd/000000",
     name: "Lyrica",

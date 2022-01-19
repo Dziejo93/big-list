@@ -2,7 +2,7 @@ import { BodyRow } from "../../../table";
 import { FixedSizeList } from "react-window";
 import { CSSProperties, Fragment, useCallback } from "react";
 import { Row } from "react-table";
-import { Courses } from "../../../../models/courses";
+import { Course } from "../../../../models/courses";
 
 const COURSES_TABLE = { HEIGHT: 326, ITEM_HEIGHT: 82, WIDTH: 752 } as const;
 
@@ -41,8 +41,8 @@ function CourseBodyRow({ row, style }: CourseBodyRowProps) {
 }
 
 interface CoursesTableBodyProps {
-  rows: Row<Courses>[];
-  prepareRow: (row: Row<Courses>) => void;
+  rows: Row<Course>[];
+  prepareRow: (row: Row<Course>) => void;
 }
 
 function CoursesTableBody({ rows, prepareRow }: CoursesTableBodyProps) {

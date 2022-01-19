@@ -1,10 +1,10 @@
 import Lozenage from "../../../lozenage";
 import styled from "styled-components";
-import { Courses } from "../../../../models/courses";
+import { Course } from "../../../../models/courses";
 import { Cell } from "react-table";
 
 interface CategoriesCellProps {
-  cell: Cell<Courses, Courses["categories"]>;
+  cell: Cell<Course, Course["categories"]>;
 }
 
 function CategoriesCell({ cell }: CategoriesCellProps) {

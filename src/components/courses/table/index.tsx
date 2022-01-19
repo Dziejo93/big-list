@@ -9,7 +9,7 @@ import Categories from "./body/CategoriesCell";
 import NameCell from "./body/NameCell";
 import EnrollmentsCell from "./body/Enrollments";
 import { useMemo } from "react";
-import { Courses } from "../../../models/courses";
+import { Course } from "../../../models/courses";
 
 export const COLUMNS_SETTINGS = [
   {
@@ -38,7 +38,7 @@ function CoursesTable() {
   const columns = useMemo(() => COLUMNS_SETTINGS, []);
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable<Courses>(
+    useTable<Course>(
       {
         columns,
         data: courses,

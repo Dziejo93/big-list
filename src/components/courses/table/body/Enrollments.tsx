@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { Courses } from "../../../../models/courses";
+import { Course } from "../../../../models/courses";
 import { Cell } from "react-table";
 import { BodyCell } from "../../../table";
 
 interface EnrollmentsCellProps {
-  cell: Cell<Courses, Courses["count"]>;
+  cell: Cell<Course, Course["count"]>;
 }
 
 function EnrollmentsCell({ cell }: EnrollmentsCellProps) {

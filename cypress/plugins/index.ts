@@ -12,13 +12,18 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-require("dotenv").config();
+import { config } from "dotenv";
+
+config();
 
 /**
  * @type {Cypress.PluginConfig}
  */
-module.exports = (on, config) => {
-  config.baseUrl = process.env.CYPRESS_BASE_URL;
+module.exports = (
+  on: Cypress.PluginEvents,
+  config: Cypress.PluginConfigOptions
+) => {
+  config.baseUrl = process.env.CYPRESS_BASE_URL ?? null;
 
   return config;
 };

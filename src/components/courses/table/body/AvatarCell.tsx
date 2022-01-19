@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { Courses } from "../../../../models/courses";
+import { Course } from "../../../../models/courses";
 import { Cell } from "react-table";
 
 const PLACEHOLDER_URL = "https://via.placeholder.com/48";
 
 interface AvatarCellProps {
-  cell: Cell<Courses, Courses["imageUrl"]>;
+  cell: Cell<Course, Course["imageUrl"]>;
 }
 
 function AvatarCell({ cell }: AvatarCellProps) {

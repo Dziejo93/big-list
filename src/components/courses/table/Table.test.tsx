@@ -3,18 +3,20 @@ import { render, screen, within } from "@testing-library/react";
 import { Provider } from "react-redux";
 
 import CoursesTable, { COLUMNS_SETTINGS } from "./index";
-import { MOCK_DATA } from "../../../__mocks__";
+import { MOCK_DATA } from "../../../mocks";
 import { RootState } from "../../../store";
+import { STATUSES } from "../../../models/statuses";
 
 const initialState = {
   courses: {
     data: MOCK_DATA,
+    status: STATUSES.IDLE,
   },
 };
 
 const mockStore = configureStore([]);
 
-function renderComponent(initialState: RootState) {
+function renderComponent(initialState: Partial<RootState>) {
   const state = mockStore(initialState);
 
   const view = render(
@@ -84,6 +86,7 @@ describe("testing courses table", () => {
     renderComponent({
       courses: {
         data: [],
+        status: STATUSES.IDLE,
       },
     });
 

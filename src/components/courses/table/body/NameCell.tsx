@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { Courses } from "../../../../models/courses";
+import { Course } from "../../../../models/courses";
 import { Cell } from "react-table";
 import { BodyCell } from "../../../table";
 
 interface NameCellProps {
-  cell: Cell<Courses, Courses["name"]>;
+  cell: Cell<Course, Course["name"]>;
 }
 
 function NameCell({ cell }: NameCellProps) {
