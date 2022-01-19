@@ -3,16 +3,18 @@ import Courses from "./Courses";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 import { RootState } from "../../store";
+import { STATUSES } from "../../models/statuses";
 
 const initialState = {
   courses: {
     data: [],
+    status: STATUSES.IDLE,
   },
 };
 
 const mockStore = configureStore([]);
 
-function renderComponent(initialState: RootState) {
+function renderComponent(initialState: Partial<RootState>) {
   const state = mockStore(initialState);
 
   const view = render(

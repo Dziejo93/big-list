@@ -28,8 +28,9 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   rules: {
-    "react/react-in-jsx-scope": ["off"],
     "prettier/prettier": ["error"],
+    "react/react-in-jsx-scope": ["off"],
+    "react/prop-types": "off",
     "cypress/no-unnecessary-waiting": "off",
     "mocha/no-mocha-arrows": "off",
     "mocha/no-exclusive-tests": "error",
@@ -38,7 +39,7 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-empty-interface": "warn",
     "@typescript-eslint/prefer-as-const": "off",
-    "react/prop-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "testing-library/render-result-naming-convention": "off",
   },
 };

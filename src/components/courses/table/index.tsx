@@ -46,7 +46,7 @@ function CoursesTable() {
       useBlockLayout
     );
 
-  if (!courses) {
+  if (!courses.length) {
     return null;
   }
 
