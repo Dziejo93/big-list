@@ -12,7 +12,7 @@ function AvatarCell({ cell }: AvatarCellProps) {
   return (
     <div {...cell.getCellProps()} data-testid="courses-table-body-cell">
       <StyledWrapper>
-        <StyledImage src={cell.value || PLACEHOLDER_URL} />
+        <StyledImage src={cell.value || PLACEHOLDER_URL} loading="lazy" />
       </StyledWrapper>
     </div>
   );

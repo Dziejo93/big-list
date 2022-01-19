@@ -46,10 +46,6 @@ function CoursesTable() {
       useBlockLayout
     );
 
-  if (!courses.length) {
-    return null;
-  }
-
   return (
     <TableComponent data-testid="courses-table" {...getTableProps()}>
       <CoursesTableHeader headerGroups={headerGroups} />

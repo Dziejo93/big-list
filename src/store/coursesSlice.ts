@@ -49,3 +49,7 @@ export default coursesSlice.reducer;
 export const selectCourses = (state: RootState) => {
   return state.courses.data;
 };
+
+export const getStatusCourses = (state: RootState) => {
+  return state.courses.status;
+};
